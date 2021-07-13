@@ -13,12 +13,18 @@ const Box = styled.div`
 
 
 export default function Home() {
-  return <Main>
+  return <main>
     
-    
+    <Box>
     Images
-    Bemvindo
+    </Box>
+   <Box>
+   Bemvindo
+   </Box>
+    <Box>
     Comunidades
+    </Box>
     
-    </Main>
+    
+    </main>
 }
