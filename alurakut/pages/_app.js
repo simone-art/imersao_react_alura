@@ -14,7 +14,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
     background-color: #09E6F6;
   }
+
+#__next{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 `
+
 
 const theme = {
   colors: {
