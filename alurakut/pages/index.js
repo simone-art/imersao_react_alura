@@ -11,20 +11,34 @@ const Box = styled.div`
   border-radius: 8px;
 `;
 
+//Criado componente MainGrid
+//Grid-gap para ver os cards separados
+const MainGrid = styled.main`
+   display: grid;
+   grid-gap: 10px;
+   padding: 16px;
+
+   @media(min-width: 860px){
+    grid-template-areas: "profileArea welcomeArea profileRelationsArea"; 
+    grid-template-column: 160px 618px 312px;
+   }
+
+`;
+
 
 export default function Home() {
-  return <main>
+  return <MainGrid>
     
-    <Box>
+    <Box style={{ gridArea: 'profileArea' }}>
     Images
     </Box>
-   <Box>
+   <Box style={{ gridArea: 'welcomeArea' }}>
    Bemvindo
    </Box>
-    <Box>
+    <Box style={{ gridArea: 'profileRelationsArea' }}>
     Comunidades
     </Box>
     
     
-    </main>
+    </MainGrid>
 }
