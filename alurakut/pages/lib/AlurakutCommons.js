@@ -498,3 +498,5 @@ export const AlurakutStyles = css`
   }
   ${AlurakutLoginScreen}
 `;
+
+export default AlurakutCommons;
