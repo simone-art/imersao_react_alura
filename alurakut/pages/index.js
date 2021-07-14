@@ -40,10 +40,11 @@ const MainGrid = styled.main`
 
 
 export default function Home() {
-  return <MainGrid>
+  return (
+   <MainGrid>
     <div className="profileArea" style={{ gridArea: 'profileArea' }}>
       <Box>
-        Images
+        <img src="https://github.com/peas.png" />
       </Box>
     </div>
 
@@ -62,4 +63,5 @@ export default function Home() {
     </Box>
    </div>
     </MainGrid>
+  )
 }
