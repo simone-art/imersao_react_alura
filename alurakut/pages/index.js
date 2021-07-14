@@ -20,7 +20,7 @@ const MainGrid = styled.main`
 
    @media(min-width: 860px){
     grid-template-areas: "profileArea welcomeArea profileRelationsArea"; 
-    grid-template-column: 160px 618px 312px;
+    grid-template-column: 160px 1fr 312px;
    }
 
 `;
@@ -42,10 +42,11 @@ export default function Home() {
     
    <div style={{ gridArea: 'profileRelationsArea' }}>
     <Box>
+      Pessoas da Comunidade
+    </Box>
+    <Box>
       Comunidades
     </Box>
    </div>
-    
-
     </MainGrid>
 }
