@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 //Criado componente MainGrid
 //Grid-gap para ver os cards separados
 // width: 100% para pegar a parte do mobile
@@ -24,3 +26,5 @@ const MainGrid = styled.main`
    }
 
 `;
+
+export default MainGrid;

@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import MainGrid from './src/components/MainGrid'
+import Box from './src/components/Box'
 
 // const Title = styled.h1`
 //   font-size: 50px;
