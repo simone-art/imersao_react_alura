@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { AlurakutStyles } from '../src/lib/AlurakutCommons';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +29,9 @@ img{
   display: block;
 }
 
+${AlurakutStyles}
 `
+//${AlurakutStyles} carrega de manera dinámova vários estilos de CSS
 
 
 const theme = {
