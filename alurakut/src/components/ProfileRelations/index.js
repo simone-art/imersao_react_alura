@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Box from '../Box';
 
+
+//styled(Box) customiza o componente Box
 export const ProfileRelationsBoxWrapper = styled(Box)`
   ul {
     display: grid;

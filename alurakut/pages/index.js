@@ -1,6 +1,7 @@
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
+import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 
 function ProfileSidebar(propriedades) {
   console.log(propriedades);
@@ -37,7 +38,7 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
     </div>
     
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
-    <Box>
+    <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">
        Pessoas da Comunidade ({pesssoasFavoritas.length})
       </h2>
@@ -51,11 +52,8 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
          )
       })}
       </ul>
-    </Box>
-    <Box>
-      Comunidades
-    </Box>
-   </div>
+      </ProfileRelationsBoxWrapper>
+    </div>
     </MainGrid>
     </>
   )
