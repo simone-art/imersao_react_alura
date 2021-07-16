@@ -1,6 +1,6 @@
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
-import { AlurakutMenu } from '../src/lib/AlurakutCommons';
+import { AlurakutMenu, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
 
 function ProfileSidebar(propriedades) {
   console.log(propriedades);
@@ -22,13 +22,17 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
     <>
     <AlurakutMenu />
    <MainGrid>
+
     <div className="profileArea" style={{ gridArea: 'profileArea' }}>
       <ProfileSidebar githubUser = {usuarioAleatorio} />
     </div>
 
     <div className="welcomeArea" style={{ gridArea: 'welcomeArea' }} >
       <Box>
-        Bemvindo
+      <h1 className="title">
+        Bemvindo(a)
+      </h1>  
+      <OrkutNostalgicIconSet />
       </Box>
     </div>
     
