@@ -35,11 +35,16 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipepimentel', 'rafaballeri
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
     <Box>
       Pessoas da Comunidade
+      <ul>
       {pesssoasFavoritas.map((itemAtual) =>{
          return (
-           <li>ItemAtual</li>
+           <a href={'users/${itemAtual}'} key={itemAtual}>
+           <img src={'https://github.com/${itemAtual}.png'}/>
+           <span>{itemAtual}</span>
+           </a>
          )
       })}
+      </ul>
     </Box>
     <Box>
       Comunidades
