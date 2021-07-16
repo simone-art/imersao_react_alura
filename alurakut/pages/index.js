@@ -15,7 +15,7 @@ function ProfileSidebar(propriedades) {
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
 export default function Home() {
 const  usuarioAleatorio = 'simone-art';
-const pesssoasFavoritas = ['omariosouto', 'peas', 'felipepimentel', 'rafaballerini']
+const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista']
 
 
   return (
@@ -34,12 +34,14 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipepimentel', 'rafaballeri
     
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
     <Box>
-      Pessoas da Comunidade
+      <h2 className="smallTitle">
+       Pessoas da Comunidade ({pesssoasFavoritas.length})
+      </h2>
       <ul>
       {pesssoasFavoritas.map((itemAtual) =>{
          return (
-           <a href={'users/${itemAtual}'} key={itemAtual}>
-           <img src={'https://github.com/${itemAtual}.png'}/>
+           <a href={`users/${itemAtual}`} key={itemAtual}>
+           <img src={`https://github.com/${itemAtual}.png`}/>
            <span>{itemAtual}</span>
            </a>
          )
