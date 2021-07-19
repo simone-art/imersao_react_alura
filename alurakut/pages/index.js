@@ -13,6 +13,7 @@ import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 function ProfileSidebar(propriedades) {
   console.log(propriedades);
   return (
+    //<Box as="aside"> é uma tag html padrão para dar forma ao que está dentro do box
     <Box as="aside">
       <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
     <hr />
@@ -38,7 +39,7 @@ export default function Home() {
 const [comunidades, setComunidades] = React.useState([{
   id:'1234455968697069706907',
   title: 'Eu odeio acordar cedo',
-  image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
+  image: 'https://picsum.photos/id/1/200/300?'
 }]);
 //const comunidades pega o array e set comunidades pega a posição
 console.log(comunidades);
