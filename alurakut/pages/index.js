@@ -120,6 +120,7 @@ console.log('seguidores antes do return', seguidores);
     </div>
     
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
+   <ProfileRelationsBox title="Seguidores" items={seguidores} />
    <ProfileRelationsBoxWrapper>
    <ul>
         {comunidades.map((itemAtual) =>{
