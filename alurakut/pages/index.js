@@ -1,14 +1,32 @@
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
-import { AlurakutMenu, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
+import { AlurakutMenu, OrkutNostalgicIconSet, AlurakutProfileSidebarMenuDefault } from '../src/lib/AlurakutCommons';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
+
+
+// <AlurakutProfileSidebarMenuDefault, componente que permite criar um card pessoal 
+// className="boxLink", classe definida dentro da tag Box que estiliza os links das caixas
+
 
 function ProfileSidebar(propriedades) {
   console.log(propriedades);
   return (
     <Box>
       <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
+    <hr />
+
+    <p>
+        <a className="boxLink" href={`https://github.com/${propriedades.githubUser}`}>
+          @{propriedades.githubUser}
+        </a>
+    </p>
+    <hr />
+
+    <AlurakutProfileSidebarMenuDefault />
+
     </Box>
+
+    
   )
 }
 
