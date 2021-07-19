@@ -57,8 +57,8 @@ const comunidades = ['Alurakut'];
        <h2>O que você deseja fazer?</h2>
        <form onSubmit={function handleCriaComunidade(e){
          e.preventDefault();
-         console.log(e)
-         alert('Olá pessoas')
+         comunidades.push('Alura-Stars');
+         console.log(comunidades);
        }}>
          <div>
           <input placeholder ="Qual vai ser o nome da sua comunidade?" 
@@ -83,6 +83,7 @@ const comunidades = ['Alurakut'];
          return (
           <li>
             <a href={`users/${itemAtual}`} key={itemAtual}>
+              <img src={`https://placehold.it/300x300`}/>
               <span>{itemAtual}</span>
             </a>
            </li>
