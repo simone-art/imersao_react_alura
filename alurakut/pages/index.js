@@ -55,6 +55,11 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
       </Box>
       <Box>
        <h2>O que você deseja fazer?</h2>
+       <form>
+         <input placeholder ="Qual vai ser o nome da sua comunidade" 
+         name="title"
+         aria-label="Qual vai ser o nome da sua comunidade" />
+       </form>
       </Box>
     </div>
     
