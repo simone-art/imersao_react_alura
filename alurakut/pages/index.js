@@ -53,6 +53,9 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
       </h1>  
       <OrkutNostalgicIconSet />
       </Box>
+      <Box>
+       <h2>O que você deseja fazer?</h2>
+      </Box>
     </div>
     
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
