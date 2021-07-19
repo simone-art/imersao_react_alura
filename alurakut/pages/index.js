@@ -13,7 +13,7 @@ import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 function ProfileSidebar(propriedades) {
   console.log(propriedades);
   return (
-    <Box>
+    <Box as="aside">
       <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
     <hr />
 
@@ -36,6 +36,7 @@ function ProfileSidebar(propriedades) {
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
 export default function Home() {
 const [comunidades, setComunidades] = React.useState([{
+  id:'1234455968697069706907',
   title: 'Eu odeio acordar cedo',
   image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
 }]);
@@ -106,7 +107,7 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
    <ul>
         {comunidades.map((itemAtual) =>{
          return (
-          <li>
+          <li key={itemAtual.id}>
             <a href={`/users/${itemAtual.title}`}>
               <img src={itemAtual.image}/>
               <span>{itemAtual.title}</span>
@@ -124,7 +125,7 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
       <ul>
         {pesssoasFavoritas.map((itemAtual) =>{
          return (
-          <li>
+          <li key={itemAtual}>
             <a href={`users/${itemAtual}`} key={itemAtual}>
               <img src={`https://github.com/${itemAtual}.png`}/>
               <span>{itemAtual}</span>
