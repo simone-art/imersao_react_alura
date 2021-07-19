@@ -67,6 +67,7 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
           name="image"
           aria-label="Coloque uma URL para usarmos de capa" />
          </div>
+         <button>Criar comunidade</button>
        </form>
       </Box>
     </div>
