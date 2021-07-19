@@ -55,7 +55,11 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
       </Box>
       <Box>
        <h2>O que você deseja fazer?</h2>
-       <form>
+       <form onSubmit={function handleCriaComunidade(e){
+         e.preventDefault();
+         console.log(e)
+         alert('Olá pessoas')
+       }}>
          <div>
           <input placeholder ="Qual vai ser o nome da sua comunidade?" 
           name="title"
