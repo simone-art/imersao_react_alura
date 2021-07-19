@@ -35,7 +35,7 @@ function ProfileSidebar(propriedades) {
 export default function Home() {
 const  usuarioAleatorio = 'simone-art';
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
-
+const comunidades = [];
 
   return (
     <>
@@ -77,6 +77,21 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
     </div>
     
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
+   <ProfileRelationsBoxWrapper>
+   <ul>
+        {pesssoasFavoritas.map((itemAtual) =>{
+         return (
+          <li>
+            <a href={`users/${itemAtual}`} key={itemAtual}>
+              <img src={`https://github.com/${itemAtual}.png`}/>
+              <span>{itemAtual}</span>
+            </a>
+           </li>
+         )
+        })}
+      </ul>
+   </ProfileRelationsBoxWrapper>
+   
     <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">
        Pessoas da Comunidade ({pesssoasFavoritas.length})
