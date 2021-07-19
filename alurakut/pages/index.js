@@ -47,6 +47,21 @@ const  usuarioAleatorio = 'simone-art';
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
 //const comunidades = ['Alurakut'];
 
+// 0 pegar o array de dados do Github
+React.useEffect(function() {
+  fetch('https://api.github.com/users/peas/followers')
+  .then(function (respostaDoServidor) {
+    return respostaDoServidor.json();
+  })
+  .then(function(respostaCompleta) {
+    setSeguidores(respostaCompleta);
+  })
+}, [])
+
+console.log('seguidores antes do return', seguidores);
+
+
+
   return (
     <>
     <AlurakutMenu />
