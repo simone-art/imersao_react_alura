@@ -35,10 +35,12 @@ function ProfileSidebar(propriedades) {
 // <AlurakutMenu /> Não se pode ter duas tags no mesmo lugar por isso deve-se usar o fragmento <>
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
 export default function Home() {
-React.useState();
+const [comunidades, setComunidades] = React.useState(['Alurakut']);
+//const comunidades pega o array e set comunidades pega a posição
+console.log(comunidades);
 const  usuarioAleatorio = 'simone-art';
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
-const comunidades = ['Alurakut'];
+//const comunidades = ['Alurakut'];
 
   return (
     <>
