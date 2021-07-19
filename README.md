@@ -53,7 +53,7 @@ Você pode, depois do deploy, simplesmente marcar a gente e usar a hash #Aluraku
 
 Poste no seu Instagram, Linkedin, Twitter ou Facebook e não esqueça de marcar #ImersaoReact, @aluraonline e seus professores para que a gente deixe um comentário e, quem sabe, você apareça nos extras das aulas!
 
-AULA 02
+# AULA 02
 
 Detalhes desse desafio:
 Nesta aula aprenderemos a lidar com o state do React e entender melhor o que é uma SPA (Single Page Application), além de dar mais vida para nosso perfil consumindo a api do github para popular nossos amigos!
