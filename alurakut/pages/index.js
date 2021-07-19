@@ -62,7 +62,10 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
        <h2>O que você deseja fazer?</h2>
        <form onSubmit={function handleCriaComunidade(e){
          e.preventDefault();
-         comunidades.push('Alura-Stars');
+         //comunidades.push('Alura-Stars');
+         //Usando O Spreed para pegar os items e integrá-los
+         const comunidadesAtualizadas = [...comunidades, 'Alura Stars']
+         setComunidades(comunidadesAtualizadas)
          console.log(comunidades);
        }}>
          <div>
