@@ -1,3 +1,4 @@
+import React from 'react';
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, OrkutNostalgicIconSet, AlurakutProfileSidebarMenuDefault } from '../src/lib/AlurakutCommons';
@@ -6,6 +7,7 @@ import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 
 // <AlurakutProfileSidebarMenuDefault, componente que permite criar um card pessoal 
 // className="boxLink", classe definida dentro da tag Box que estiliza os links das caixas
+//State serve pra manipular o estado React.useState funciona como loop
 
 
 function ProfileSidebar(propriedades) {
@@ -33,6 +35,7 @@ function ProfileSidebar(propriedades) {
 // <AlurakutMenu /> Não se pode ter duas tags no mesmo lugar por isso deve-se usar o fragmento <>
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
 export default function Home() {
+React.useState();
 const  usuarioAleatorio = 'simone-art';
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
 const comunidades = ['Alurakut'];
