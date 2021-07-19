@@ -78,6 +78,7 @@ React.useEffect(function() {
     return respostaDoServidor.json();
   })
   .then(function(respostaCompleta) {
+    //Pega o número de seguidores da URL da Api
     setSeguidores(respostaCompleta);
   })
 }, [])
