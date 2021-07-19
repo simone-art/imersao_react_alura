@@ -35,7 +35,10 @@ function ProfileSidebar(propriedades) {
 // <AlurakutMenu /> Não se pode ter duas tags no mesmo lugar por isso deve-se usar o fragmento <>
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
 export default function Home() {
-const [comunidades, setComunidades] = React.useState(['Alurakut']);
+const [comunidades, setComunidades] = React.useState([{
+  title: 'Eu odeio acordar cedo',
+  image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
+}]);
 //const comunidades pega o array e set comunidades pega a posição
 console.log(comunidades);
 const  usuarioAleatorio = 'simone-art';
@@ -62,11 +65,25 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
        <h2>O que você deseja fazer?</h2>
        <form onSubmit={function handleCriaComunidade(e){
          e.preventDefault();
+         const dadosDoForm = new FormData(e.target);
+
+         console.log('Campo: ', dadosDoForm.get('title'));
+         console.log('Campo: ', dadosDoForm.get('image'));
+         
+         const comunidade = {
+          id: new Date().toISOString(),
+          title: dadosDoForm.get('title'),
+          image: dadosDoForm.get('image'),
+        }
+
+        const comunidadesAtualizadas = [...comunidades, comunidade];
+                setComunidades(comunidadesAtualizadas)
+
          //comunidades.push('Alura-Stars');
          //Usando O Spreed para pegar os items e integrá-los
-         const comunidadesAtualizadas = [...comunidades, 'Alura Stars']
-         setComunidades(comunidadesAtualizadas)
-         console.log(comunidades);
+         //const comunidadesAtualizadas = [...comunidades, 'Alura Stars']
+         //setComunidades(comunidadesAtualizadas)
+         //console.log(comunidades);
        }}>
          <div>
           <input placeholder ="Qual vai ser o nome da sua comunidade?" 
@@ -90,9 +107,9 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
         {comunidades.map((itemAtual) =>{
          return (
           <li>
-            <a href={`users/${itemAtual}`} key={itemAtual}>
-              <img src={`https://placehold.it/300x300`}/>
-              <span>{itemAtual}</span>
+            <a href={`/users/${itemAtual.title}`}>
+              <img src={itemAtual.image}/>
+              <span>{itemAtual.title}</span>
             </a>
            </li>
          )
