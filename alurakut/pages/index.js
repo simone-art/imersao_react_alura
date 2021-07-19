@@ -47,6 +47,7 @@ const  usuarioAleatorio = 'simone-art';
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
 //const comunidades = ['Alurakut'];
 
+const [seguidores, setSeguidores] = React.useState([]);
 // 0 pegar o array de dados do Github
 React.useEffect(function() {
   fetch('https://api.github.com/users/peas/followers')
