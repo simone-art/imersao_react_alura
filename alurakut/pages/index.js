@@ -58,15 +58,11 @@ function ProfileRelationsBox(propriedades) {
 
 // <AlurakutMenu /> Não se pode ter duas tags no mesmo lugar por isso deve-se usar o fragmento <>
 //<> O fragmento engloba as tuas tags, neste caso Alurakut e MainGrid
+
 export default function Home() {
-const [comunidades, setComunidades] = React.useState([{
-  id:'1234455968697069706907',
-  title: 'Eu odeio acordar cedo',
-  image: 'https://picsum.photos/id/1/200/300?'
-}]);
-//const comunidades pega o array e set comunidades pega a posição
-console.log(comunidades);
 const  usuarioAleatorio = 'simone-art';
+const [comunidades, setComunidades] = React.useState([]);
+
 const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini', 'mayconbatista', 'simone-art']
 //const comunidades = ['Alurakut'];
 
@@ -96,11 +92,13 @@ fetch('https://graphql.datocms.com/', {
           id 
           title
           imageUrl
+          creatorSlug
         }
       }` })
     })
     .then((response) => response.json()) // Pega o retorno do response.json() e já retorna
     .then((respostaCompleta) => {
+      //const comunidadesVindasDoDato vem da Api Graph
       const comunidadesVindasDoDato = respostaCompleta.data.allCommunities;
       console.log(comunidadesVindasDoDato)
       setComunidades(comunidadesVindasDoDato)
