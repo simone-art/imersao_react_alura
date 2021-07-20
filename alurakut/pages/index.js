@@ -146,14 +146,22 @@ console.log('seguidores antes do return', seguidores);
           image: dadosDoForm.get('image'),
         }
 
-        
-
-         //comunidades.push('Alura-Stars');
-         //Usando O Spreed para pegar os items e integrá-los
-         //const comunidadesAtualizadas = [...comunidades, 'Alura Stars']
-         //setComunidades(comunidadesAtualizadas)
-         //console.log(comunidades);
-       }}>
+        fetch('/api/comunidades', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(comunidade)
+        })
+        .then(async (response) => {
+          const dados = await response.json();
+          console.log(dados.registroCriado);
+          const comunidade = dados.registroCriado;
+          const comunidadesAtualizadas = [...comunidades, comunidade];
+          setComunidades(comunidadesAtualizadas)
+        })
+    }}>
+      
          <div>
           <input placeholder ="Qual vai ser o nome da sua comunidade?" 
           name="title"
