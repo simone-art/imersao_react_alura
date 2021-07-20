@@ -69,6 +69,7 @@ const pesssoasFavoritas = ['omariosouto', 'peas', 'felipementel', 'rafaballerini
 const [seguidores, setSeguidores] = React.useState([]);
 // 0 pegar o array de dados do Github
 React.useEffect(function() {
+  // GET
   fetch('https://api.github.com/users/peas/followers')
   .then(function (respostaDoServidor) {
     return respostaDoServidor.json();
@@ -145,8 +146,7 @@ console.log('seguidores antes do return', seguidores);
           image: dadosDoForm.get('image'),
         }
 
-        const comunidadesAtualizadas = [...comunidades, comunidade];
-                setComunidades(comunidadesAtualizadas)
+        
 
          //comunidades.push('Alura-Stars');
          //Usando O Spreed para pegar os items e integrá-los
