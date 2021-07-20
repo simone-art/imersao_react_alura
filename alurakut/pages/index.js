@@ -81,7 +81,36 @@ React.useEffect(function() {
     //Pega o número de seguidores da URL da Api
     setSeguidores(respostaCompleta);
   })
-}, [])
+
+
+// API GrapQL
+fetch('https://graphql.datocms.com/', {
+      method: 'POST',
+      headers: {
+        'Authorization': '7f7590695431ea76f84616a4b4d32d',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({ "query": `query {
+        allCommunities {
+          id 
+          title
+          imageUrl
+        }
+      }` })
+    })
+    .then((response) => response.json()) // Pega o retorno do response.json() e já retorna
+    .then((respostaCompleta) => {
+      const comunidadesVindasDoDato = respostaCompleta.data.allCommunities;
+      console.log(comunidadesVindasDoDato)
+      setComunidades(comunidadesVindasDoDato)
+    })
+    // .then(function (response) {
+    //   return response.json()
+    // })
+
+  }, [])
+
 
 console.log('seguidores antes do return', seguidores);
 
