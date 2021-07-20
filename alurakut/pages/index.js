@@ -141,9 +141,10 @@ console.log('seguidores antes do return', seguidores);
          console.log('Campo: ', dadosDoForm.get('image'));
          
          const comunidade = {
-          id: new Date().toISOString(),
+          //id: new Date().toISOString(),
           title: dadosDoForm.get('title'),
           image: dadosDoForm.get('image'),
+          creatorSlug: usuarioAleatorio,
         }
 
         fetch('/api/comunidades', {
@@ -161,7 +162,7 @@ console.log('seguidores antes do return', seguidores);
           setComunidades(comunidadesAtualizadas)
         })
     }}>
-      
+
          <div>
           <input placeholder ="Qual vai ser o nome da sua comunidade?" 
           name="title"
