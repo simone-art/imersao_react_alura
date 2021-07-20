@@ -16,20 +16,17 @@ function ProfileSidebar(propriedades) {
     //<Box as="aside"> é uma tag html padrão para dar forma ao que está dentro do box
     <Box as="aside">
       <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
-    <hr />
+     <hr />
 
-    <p>
+     <p>
         <a className="boxLink" href={`https://github.com/${propriedades.githubUser}`}>
           @{propriedades.githubUser}
         </a>
-    </p>
-    <hr />
+     </p>
+      <hr />
 
-    <AlurakutProfileSidebarMenuDefault />
-
+     <AlurakutProfileSidebarMenuDefault />
     </Box>
-
-    
   )
 }
 
@@ -132,7 +129,7 @@ console.log('seguidores antes do return', seguidores);
       <OrkutNostalgicIconSet />
       </Box>
       <Box>
-       <h2>O que você deseja fazer?</h2>
+       <h2 className="subTitle">O que você deseja fazer?</h2>
        <form onSubmit={function handleCriaComunidade(e){
          e.preventDefault();
          const dadosDoForm = new FormData(e.target);
@@ -182,19 +179,22 @@ console.log('seguidores antes do return', seguidores);
    <div  className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
    <ProfileRelationsBox title="Seguidores" items={seguidores} />
    <ProfileRelationsBoxWrapper>
-   <ul>
-        {comunidades.map((itemAtual) =>{
-         return (
-          <li key={itemAtual.id}>
-             <a href={`/communities/${itemAtual.id}`}>
-              <img src={itemAtual.imageUrl} />
-              <span>{itemAtual.title}</span>
-            </a>
-           </li>
-         )
-        })}
-      </ul>
-   </ProfileRelationsBoxWrapper>
+            <h2 className="smallTitle">
+              Comunidades ({comunidades.length})
+            </h2>
+            <ul>
+            {comunidades.slice(0,6).map((itemAtual) => {
+                return (
+                  <li key={itemAtual.id}>
+                    <a href={`/communities/${itemAtual.id}`}>
+                      <img src={itemAtual.imageUrl} />
+                      <span>{itemAtual.title}</span>
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+    </ProfileRelationsBoxWrapper>
 
     <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">
@@ -204,7 +204,7 @@ console.log('seguidores antes do return', seguidores);
         {pesssoasFavoritas.map((itemAtual) =>{
          return (
           <li key={itemAtual}>
-            <a href={`users/${itemAtual}`} key={itemAtual}>
+            <a href={`users/${itemAtual}`}>
               <img src={`https://github.com/${itemAtual}.png`}/>
               <span>{itemAtual}</span>
             </a>
